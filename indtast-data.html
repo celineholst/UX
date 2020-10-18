@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Tæl skridt</title>
+    <meta name="author" content="Louise, Dina, Mikkel og Celine">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/indtast-data.css">
+
+    <!-- Ikon -->
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+          rel=stylesheet>
+</head>
+
+<body>
+
+    <header>
+     <!-- Navigation -->
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-brand">
+                <a href="forside-tilmeld.html">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            
+            <!-- Hamburger ikon -->
+            <button class="ham"></button>
+            
+            <!-- Menupunkter -->
+            <nav class="navbar">
+                <ul>
+                    <li><a class="menuLink" href="forside-tilmeld.html">Hjem</a></li>
+                    <li><a class="menuLink" href="oversigt-data.html">Oversigt</a></li>
+                    <li><a class="menuLink" href="udfordre.html">Udfordre</a></li>
+                    <li><a class="menuLink" href="indtast-data.html">Indtast data</a></li>
+                    <li><a class="menuLink" href="#">Log ud</a></li>
+                </ul>
+            </nav>
+        </div>
+</header>
+
+    <main>
+       <div class="background"> 
+        
+        <img class="mand" src="images/mand2.png">
+        
+        <img class="flag" src="images/flag2.png">
+        
+    <h1 class="indtast-data">Indtast dine data</h1>
+    
+    <p class="data-tekst">Herunder indtaster du dine daglige antal skridt, som du har gået, og uploader samtidigt et billeder af eksempelvis din skridttæller, Applewatch, smartphone osv. der viser, antallet af skirdt du, har gået i dag.</p>
+    
+    <!-- en form til at indtaste sine daglige skridt-->
+    <div class="form-wrap">
+        <form>
+        
+            <label class="label" id="lab">Antal skridt <span class="help"> * </span></label>
+            <input class="tekst" type="text">
+            
+            <input claas="knap" type="button" value="Indsend">
+        </form>
+    </div>
+        
+    <!-- en knap til at uploade et billede -->
+    <input type="file" id="file" accept="image/*">
+    <label class="valg" for="file">
+        <span class="material-icons">
+            add_photo_alternate
+            </span>
+        Vælg billede    
+    </label>
+       </div>  
+   
+        
+    </main>
+
+    <footer></footer>
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/indtast-data.js"></script>
+</body>
+
+</html>

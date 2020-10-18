@@ -1,0 +1,168 @@
+/**
+ * file: css/tilmelding-form.css
+ **/
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    min-height: 800px;
+}
+
+body {
+    background: url(../images/nature.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, sans-serif;
+    user-select: none;
+}
+
+/* Tekst styles */
+span {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: red;
+}
+
+h1 {
+    font-weight: 600;
+    padding-top: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Plus/minus placeholder */
+button {
+    background-color: #f6944c;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: .5s;
+}
+
+button:hover {
+    background: #f67e23;
+    color: #000;
+}
+
+#tal {
+    border: none;
+    outline: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    background: transparent;
+    margin: -10px;
+}
+
+/* Tilføj/fjern placeholders */
+a img {
+    width: 20px;
+}
+
+.add {
+    margin: -1px;
+}
+
+.remove_button {
+    margin: 5px;
+}
+
+/* Svg progress */
+#svg_form_time {
+    height: 20px;
+    max-width: 80%;
+    margin: 40px auto 20px;
+    display: block;
+}
+
+#svg_form_time circle,
+#svg_form_time rect {
+    fill: white;
+}
+
+/* Næste/forrige knapper */
+.knap-container {
+    text-align: center;
+}
+
+.knap {
+    background: #f6944c;
+    border-radius: 5px;
+    padding: 15px 25px;
+    display: inline-block;
+    margin: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgb(0,0,0,0.5);
+    transition: .5s;
+}
+
+.betal {
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+.betal:hover {
+    background: #f67e23;
+    color: #000;
+}
+
+.knap:hover {
+    background: #f67e23;
+    color: #000;
+}
+
+.disabled {
+    display: none;
+}
+
+/* Form styles */
+section {
+    padding: 50px;
+    max-width: 300px;
+    margin: 30px auto;
+    background: white;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+input {
+    width: 100%;
+    margin: 7px 0px;
+    display: inline-block;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #d4d4d4;
+    font-size: 1em;
+    font-family: inherit;
+    background: white;
+}
+
+.field_wrapper input {
+    width: 90%;
+}
+
+/* Rewardboks */

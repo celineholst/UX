@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Tæl skridt</title>
+    <meta name="author" content="Louise, Dina, Mikkel og Celine">
+    <meta name="description" content="Tilmeldingsformular til Tæl Skridt. Her har vi brug for et par få oplysninger, og herefter kan du gå i gang!">
+    <meta name="keywords" content="tilmelding, personlige oplysninger, oplysninger, holdoplysninger, hold, betaling, betalingsinformation">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/tilmelding-form.css">
+    <link href="css/jquery.nice-number.css" rel="stylesheet">
+
+    <!-- Ikon -->
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+</head>
+
+<body>
+
+    <header></header>
+
+    <main>
+        <!-- Processbar -->
+        <div id="svg_wrap"></div>
+
+        <!-- Tilmeldingsform -->
+        <h1>TILMELDING</h1>
+
+        <!-- Personlige oplysninger -->
+        <section>
+            <p>Personlige oplysninger</p>
+            <label class="label">Navn<span>*</span></label>
+            <input type="text">
+            <label class="label">Mobil<span>*</span></label>
+            <input type="text">
+            <label class="label">Adresse<span>*</span></label>
+            <input type="text">
+            <label class="label">Postnummer<span>*</span></label>
+            <input type="text">
+            <label class="label">By<span>*</span></label>
+            <input type="text">
+        </section>
+
+        <!-- Holdoplysninger -->
+        <section>
+            <p>Holdoplysninger</p>
+            <label class="label">Holdnavn<span>*</span></label>
+            <input type="text"><br><br>
+            <label class="medlem">Antal medlemmer<span>*</span></label>
+            <input type="number" name="" id="tal" value="1" min="1">
+            <br><br><br><label class="label">Navne på holdkammerater<span>*</span></label>
+            <div class="field_wrapper">
+                <input type="text" name="field_name[]" value="">
+                <a href="javascript:void(0);" class="add_button" title="Add field"><img class="add" src="images/add.png"/></a>
+            </div>
+        </section>
+
+        <!-- Betalingsinformation -->
+        <section>
+            <p>Betalingsinformation</p>
+            <label class="label">Subtotal</label>
+            <input type="text" placeholder="150 DKK"/>
+            <label class="label">Kortholders navn<span>*</span></label>
+            <input type="text">
+            <label class="label">Kortnummer<span>*</span></label>
+            <input type="text">
+            <label class="label">Udløbsdato<span>*</span></label>
+            <input type="text">
+            <label class="label">CVC<span>*</span></label>
+            <input type="text">
+        </section>
+
+        <!-- Knapper -->
+        <div class="knap-container">
+        <div class="knap" id="prev">&larr; FORRIGE</div>
+        <div class="knap" id="next">NÆSTE &rarr;</div>
+        <div class="knap" id="submit"><a href="reward.html" class="betal">VIDERE</a></div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/tilmelding-form.js"></script>
+    <script src="js/jquery.nice-number.js"></script>
+
+    
+</body></html>

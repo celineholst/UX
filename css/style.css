@@ -1,0 +1,338 @@
+/**
+ * file: css/style.css
+ **/
+
+/* Global styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Basis styles for navigation */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-container {
+    padding: 15px;
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    border-bottom: 2px solid white;
+}
+
+/* Logo */
+a img {
+    width: 90px;
+}
+
+/* Navigation */
+.ham {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+}
+
+/* Ændre ham image til luk */
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+/* Vis menuen */
+.showNav {
+    transform: translateY(0);
+}
+
+/* Hero image */
+section {
+    padding: 5rem 0;
+}
+
+.hero {
+    width: 100%;
+    height: 50vh;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url(../images/wave-large.png) center no-repeat;
+    background-size: cover;
+}
+
+/* Hero tekst */
+.main-message {
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    font-family: Verdana, Geneva, sans-serif;
+    transform: translateY(20%);
+}
+
+.main-message h1 {
+    text-transform: uppercase;
+    margin: 25px;
+    font-size: 1.8rem
+}
+
+.main-message p {
+    margin: 25px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* CTA knap */
+.cta {
+    margin: 25px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    background-color: #f6944c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Om kampangen */
+.about {
+    font-family: Verdana, Geneva, sans-serif;
+    margin: 25px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.about h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+.main {
+    background: url(../images/footer.png) center no-repeat;
+    background-size: cover;
+    font-family: Verdana, Geneva, sans-serif;
+    width: 100%;
+    height: 41.7rem;
+    position: absolute;
+    margin-top: -120px;
+    color: white;
+    line-height: 1.5;
+}
+
+.main-item {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+.top {
+    margin-top: 100px;
+}
+
+.mere {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.1rem;
+    transition: 0.3s;
+}
+
+/* Media rules */
+@media (min-width: 992px) {
+
+    /* Navigation */
+    header {
+        height: 8rem;
+    }
+
+    a img {
+        width: 150px;
+    }
+
+    .navbar {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: none;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    .ham {
+        display: none;
+    }
+
+    .navbar ul li a {
+        padding: 40px;
+        color: black;
+        font-weight: 600;
+    }
+
+    ul li a {
+        transition: all 0.4s ease;
+    }
+
+    ul li a:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: tomato;
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: 0.5s all;
+    }
+
+    ul li a:hover {
+        color: #f6944c;
+    }
+
+    ul li a:hover:after {
+        width: 100%;
+    }
+
+    /* Hero image */
+    .hero {
+        height: 60vh;
+    }
+
+    .main-message {
+        margin-left: 70px;
+    }
+
+    .hero::before {
+        height: 12rem;
+
+    }
+
+    .main-message h1 {
+        font-size: 3rem;
+    }
+
+    .main-message p {
+        font-size: 1.4rem;
+    }
+
+    .cta {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 1.2rem 2.8rem;
+    }
+
+    /* Om kampangen */
+    .about {
+        margin-top: -80px;
+        margin-left: 110px;
+        margin-right: 110px;
+    }
+
+    .about h2 {
+        font-size: 2.3rem;
+    }
+
+    .about p {
+        font-size: 1.4rem;
+    }
+    
+    /* Footer */
+    .main {
+        margin-top: -400px;
+        background: url(../images/footer-big.png) center no-repeat;
+        background-size: cover;
+        align-items: center;
+        height: 45.7rem;
+    }
+    
+    .main-item {
+        position: relative;
+        left: 140px;
+        margin-top: 430px;
+        float: left;
+    }
+}

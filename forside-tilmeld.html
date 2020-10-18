@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Tæl skridt</title>
+    <meta name="author" content="Louise, Dina, Mikkel og Celine">
+    <meta name="description" content="Udforsk Tøl Skridt. Du kan en masse ting, såsom de dine egne data og udfordre dine holdkammerater">
+    <meta name="keywords" content="velkommen, udforsk, oversigt, udfordre, indtast, data, vejret, by">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/forside-tilmeld.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Ikon -->
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-brand">
+                <a href="forside-tilmeld.html">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            
+            <!-- Hamburger ikon -->
+            <button class="ham"></button>
+            
+            <!-- Menupunkter -->
+            <nav class="navbar">
+                <ul>
+                    <li><a class="menuLink" href="forside-tilmeld.html">Hjem</a></li>
+                    <li><a class="menuLink" href="oversigt-data.html">Oversigt</a></li>
+                    <li><a class="menuLink" href="udfordre.html">Udfordre</a></li>
+                    <li><a class="menuLink" href="indtast-data.html">Indtast data</a></li>
+                    <li><a class="menuLink" href="#">Log ud</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero image -->
+        <section class="hero">
+            <div class="container">
+               <!-- Hero tekst -->
+                <div class="main-message">
+                    <h1>VELKOMMEN TIL NAVN</h1>
+                    <p>Du kan nu frit gå på opdagelse på Tæl Skridt. Her kan du finde oversigt over egne data, samt udfordre dine holdkammerater.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Infobokse -->
+        <section class="experience-outdoors">
+            <div class="outdoor-container">
+               <div class="title-heading">
+               <h2>Udforsk følgende</h2>
+               </div>
+               
+               <div class="activities-grid">
+                   <!-- Grid element 1 -->
+                   <a href="oversigt-data.html">
+                   <div class="activities-grid-item oversigt">
+                       <span class="iconify" data-icon="ion:ribbon-outline" data-inline="false" width="50" style="color: #f6944c;"></span>
+                       <h4>Oversigt</h4>
+                       <p>Her finder du en oversigt over dine data. Yderligere kan du se din placering i forhold til dine holdkammerater!</p>
+                   </div>
+                   </a>
+                   
+                   <!-- Grid element 2 -->
+                   <a href="udfordre.html">
+                   <div class="activities-grid-item udfordre">
+                       <span class="iconify" data-icon="ion:people-outline" data-inline="false" width="50" style="color: #f6944c;"></span>
+                       <h4>Udfordre dine holdkammerater</h4>
+                       <p>Her kan du udfordre dine andre holdkammerater. På den måde kan vi opretholde kampgejsten på hele holdet!</p>
+                   </div>
+                   </a>
+                   
+                   <!-- Grid element 3 -->
+                   <a href="indtast-data.html">
+                   <div class="activities-grid-item indtast">
+                       <span class="iconify" data-icon="ion:cloud-upload-outline" data-inline="false" width="50" style="color: #f6944c;"></span>
+                       <h4>Indtast dine data</h4>
+                       <p>Her kan du indtaste dine daglige antal skridt, som du har gået, for at komme højere op på ranglisten!</p>
+                   </div>
+                   </a>
+               </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <section class="main">
+        <div class="footer">
+        <h4>Se vejret i din by!</h4>
+        <p>Vejret skal ikke være en undskyldning for ikke at komme ud. Se vejret på netop din by nedenfor:</p>
+        <div class="main-2">
+        <div class="input">
+      <input type="text" placeholder="Indtast by" class="input_text">
+      <input type="submit" value="Søg" class="submit">
+    </div>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="name" id="name"></h1>
+      <p class="temp"></p>
+      <p class="clouds"></p>
+      <p class="desc"></p>
+    </div>
+  </div>
+   </div>
+    </div>
+        </section>
+        
+    </footer>
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/forside-tilmeld.js"></script>
+    
+    <!-- Plugin -->
+      <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    
+</body>
+
+</html>

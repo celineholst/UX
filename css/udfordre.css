@@ -1,0 +1,377 @@
+/**
+ * file: css/udfordre.css
+ **/
+/* Global styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Basis styles for navigation */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-container {
+    padding: 15px;
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    border-bottom: 2px solid white;
+}
+
+/* Logo */
+a img {
+    width: 90px;
+}
+
+/* Navigation */
+.ham {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+}
+
+/* Ændre ham image til luk */
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+/* Vis menuen */
+.showNav {
+    transform: translateY(0);
+}
+
+main{
+    margin: 0;
+    padding: 100px 0px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+
+.presentation{
+    min-height: 80vh;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/* tekst */
+
+.intro-text h1 {
+    font-size: 28px;
+    background: linear-gradient(to right, black);
+    padding-bottom: 30px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.intro-text p{
+    font-size: 18px;
+    color: black;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+/* billede */
+
+.cover img{
+    padding-left: 20px;
+    height: 250px;
+    
+}
+
+/* Container */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -200px;
+    padding-top: 200px;
+}
+
+.our-team{
+    background: white;
+    background: rgba(255,255,255,.0.9);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0px 25px;
+    padding: 50px 90px;
+}
+
+
+/* Billede */
+
+.our-team .image{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0px;
+    z-index: 1px;
+    position: relative;
+    
+}
+
+.our-team .image::before{
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background: #384f69;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.2;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .image::before{
+    height: 100%;
+}
+
+.our-team .image:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #384f69;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .image img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .image img{
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+      
+}
+
+.our-team .team-content{
+    margin-bottom: 30px;
+}
+
+/* Title */
+
+.our-team .title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #4e5052;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+/* Rank*/
+
+.our-team .rank{
+    display: block;
+    font-size: 20px;
+    color: #4e5052;
+}
+
+/* Skridt */
+
+p {
+   display: block;
+    font-size: 20px;
+    color: #4e5052; 
+    padding: 10px;
+}
+
+
+/* Knap */ 
+.our-team .btn{
+     background-color: #f6944c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: px;
+        
+    }
+
+/* Media Rules */
+@media (max-width: 768px) {
+     .container{
+        flex-direction: column;
+    }
+    .our-team{
+        width: 80%;
+        margin-top: 30px;
+        
+    }
+}
+
+
+@media (min-width: 992px) {
+    /* Navigation */
+    header {
+        height: 8rem;
+    }
+
+    a img {
+        width: 150px;
+    }
+
+    .navbar {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: none;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    .ham {
+        display: none;
+    }
+
+    .navbar ul li a {
+        padding: 40px;
+        color: black;
+        font-weight: 600;
+    }
+
+    ul li a {
+        transition: all 0.4s ease;
+    }
+
+    ul li a:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: tomato;
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: 0.5s all;
+    }
+
+    ul li a:hover {
+        color: #f6944c;
+    }
+
+    ul li a:hover:after {
+        width: 100%;
+    }
+    
+    .presentation{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        min-height: 80vh;
+        align-content: center;
+    }
+    
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+        flex: 1;
+    }
+    
+    .intro-text h1 {
+        font-size: 44px;
+        background: linear-gradient(to right); 
+        margin-bottom: 30px;
+        
+        
+    }
+    
+    .intro-text p{
+        font-size: 18p;
+        margin-top: 5px;
+        color: black;
+        padding-top: 30px;
+        
+    }
+    
+    .cover {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+}
+
+.cover img{
+    display: block;
+    height: 100%;
+    filter: drop-shadow(0px, 5px, 3px black);
+    animation: drop 1.5s ease;
+}
+    
+}
+

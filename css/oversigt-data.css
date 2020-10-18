@@ -1,0 +1,466 @@
+/**
+ * file: css/oversigt-data.css
+ **/
+/* Global styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Basis styles for navigation */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-container {
+    padding: 15px;
+    
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    border-bottom: 2px solid white;
+}
+
+/* Logo */
+a img {
+    width: 90px;
+}
+
+/* Navigation */
+.ham {
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+}
+
+/* Ændre ham image til luk */
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+}
+
+/* Vis menuen */
+.showNav {
+    transform: translateY(0);
+}
+
+@media (min-width: 992px) {
+    /* Navigation */
+    header {
+        height: 8rem;
+    }
+
+    a img {
+        width: 150px;
+    }
+
+    .navbar {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        flex-flow: none;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+    }
+
+    .ham {
+        display: none;
+    }
+
+    .navbar ul li a {
+        padding: 40px;
+        color: black;
+        font-weight: 600;
+    }
+
+    ul li a {
+        transition: all 0.4s ease;
+    }
+
+    ul li a:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background-color: tomato;
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: 0.5s all;
+    }
+
+    ul li a:hover {
+        color: #f6944c;
+    }
+
+    ul li a:hover:after {
+        width: 100%;
+    }
+
+}
+
+.oversigt{
+    margin-top: 90px;
+    margin-left: 25px;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-right: 25px;
+    line-height: 1.5;
+    font-size: 1.8rem; 
+    text-transform: uppercase;
+}
+
+@media (min-width: 992px){
+    .oversigt{
+        margin-top: 150px;
+        margin-left: 82px;
+    }
+}
+
+.beskrivelse{
+    margin-left: 25px;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-right: 25px;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 992px){
+    .beskrivelse{
+        margin-left: 82px;
+    }
+}
+
+.kampagnedage{
+    margin-top: 20px;
+    margin-left: 25px;
+    font-family: Verdana, Geneva, sans-serif;
+    margin-right: 25px;
+    line-height: 1.5;
+    font-size: 1.7rem; 
+}
+
+@media (min-width: 992px){
+    .kampagnedage{
+    text-align: center;
+    margin-top: 80px;
+    }
+    
+}
+
+.kampagnedage span{
+    color: #f6944c;
+} 
+
+
+/* Her styles "box'en" rundt om tabellerne */
+.alle-tabel {
+  border-collapse: collapse;
+  margin: 28px;
+  font-size: 0.9em;
+  min-width: 350px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 992px){
+    .alle-tabel{
+      width: 600px;
+        margin-left: 430px;
+        height: 300px;
+    }
+}
+
+/* den første række styles*/
+.alle-tabel thead tr {
+  background-color: #5e7763;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+    
+}
+
+@media (min-width: 992px){
+    .alle-tabel thead tr{
+        font-size: 20px;
+    }
+}
+
+
+/*nedenfor styles tekst i tabellen*/
+.alle-tabel th,
+.alle-tabel td {
+  padding: 12px 15px;
+    text-align: center;
+}
+
+@media (min-width: 992px){
+   .alle-tabel th,
+    .alle-tabel td {
+        font-size: 18px;
+    } 
+}
+
+/*farven i hver anden række ændres i tabellen*/
+.alle-tabel tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.alle-tabel tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+/*der laves en afslutingfarve i tabellen*/
+.alle-tabel tbody tr:last-of-type {
+  border-bottom: 2px solid #5e7763;
+}
+
+/*der laves en farve for at markere, at dette er dine data*/
+.alle-tabel tbody tr.active-row {
+  font-weight: bold;
+  color: #f6944c;
+}
+
+.skridt{
+    margin-top: 70px;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem; 
+    text-align: center;
+}
+
+@media (min-width: 992px){
+    .skridt{
+        margin-top: 100px;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*der styles en usynlig box om cirklen for at placere den*/
+.box{
+    position: relative;
+    width: 300px;
+    height; 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+@media (min-width: 992px){
+    .box{
+        margin-left: 570px;
+        
+        
+    }
+}
+
+.box .procent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/*cirklerne placeres samme sted*/
+.box .procent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+
+
+/*cirklerne styles og der bestemmes en stroke til den givne procent*/
+.box .procent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+    
+}
+
+
+/*den første cirkel bliver grå og symboliserer 100%*/
+.box .procent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+ /*den anden cirkel gøres grøn for at sybolisere den givne procent. procenten regnes ud ved at trække 87 (vores procent) fra dasharray og offset, herefter divideres der med 100 for at få det i procent*/
+.box .procent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 87) / 100);
+    stroke: #5e7763;
+}
+
+/*teksten i cirklen styles*/
+.box .procent .nummer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.box .procent .nummer h2{
+    font-size: 30px;
+}
+
+.box .procent .nummer h2 span{
+    font-size: 20px;
+}
+
+
+.skridt-2{
+    margin-top: 20px;
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem; 
+    text-align: center;
+}
+
+@media (min-width: 992px){
+    .skridt-2{
+        font-size: 1.3rem;
+    }
+}
+
+.data-overskrift{
+   font-family: Verdana, Geneva, sans-serif;
+    margin-left: 25px;
+    font-size: 1.7rem;
+    margin-top: 70px
+}
+
+@media (min-width: 992px){
+    .data-overskrift{
+        text-align: center;
+        margin-top: 110px;
+    }
+    
+}
+
+.data-tekst{
+    font-family: Verdana, Geneva, sans-serif;
+    margin-left: 25px;
+    font-size: 1.1rem;
+    margin-right: 25px;
+    line-height: 1.5;
+}
+
+@media (min-width: 992px){
+    .data-tekst{
+        text-align: center;
+    }
+}
+
+.ingen-data{
+    font-family: Verdana, Geneva, sans-serif;
+    margin-left: 25px;
+    font-size: 1.1rem;
+    margin-right: 25px;
+    line-height: 1.5;
+}
+
+@media (min-width: 992px){
+    .ingen-data{
+        text-align: center;
+        margin-top: 60px
+    }
+}
+
+.indtast{
+    background: #f6944c;
+    border: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px 0px;
+    width: 50%;
+    margin-left: 100px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.indtast a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+@media (min-width: 992px){
+    .indtast{
+      width: 15%;
+        margin-left: 620px;
+        
+        
+    }
+}

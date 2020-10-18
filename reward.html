@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Tæl skridt</title>
+    <meta name="author" content="Louise, Dina, Mikkel og Celine">
+    <meta name="description" content="Bekræft dine informationer her, så vi er sikre på at alle informationer er korrekte">
+    <meta name="keywords" content="information, bekræft, sted, subtotbal, gennemfør, betaling, betingelser">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/reward.css">
+
+    <!-- Ikon -->
+    <link rel="icon" type="image/x-icon" href="images/icon.png" />
+</head>
+
+<body>
+
+    <header></header>
+
+    <main>
+      <h1>BEKRÆFT INFORMATIONER</h1>
+        <h2>Vi er der næsten! Blot et enkelt step endnu...</h2>
+        <p class="check">Tjek om dine informationer er korrekte</p>
+        
+       <section>
+           <h3>Her er dine informationer:</h3>
+           <p class="ordre">Ordre #: XXXXXXXXX<span>Ordre dato: 21/10/2020</span></p>
+           <hr>
+           
+           <p class="bestilling">3x deltagere á 50 DKK</p>
+            <p class="total">Subtotal<span>DKK 150<br>inkl moms</span><p>
+            <hr class="hr">
+            
+            <!-- Betingelser -->
+            <input type="checkbox" name="check">
+            <label for="check">Jeg bekræfter at have læst og accepteret Tæl Skridts handelsbetingelser samt Tæl Skridts privatlivspolitik <span>*</span></label><br>
+            <input type="checkbox" name="check2">
+            <label for="check2">Få nyheder og tilbud om Tæl Skridt</label>
+       </section>
+       
+        <div class="popup center">
+           <!-- Check ikon -->
+            <div class="icon">
+                <i class="fa fa-check"></i>
+            </div>
+            <!-- Tekst content -->
+            <div class="title">Betaling gennemført!</div>
+            <div class="description">
+                Tak, din betaling er gennemført. En bekæftelsesmail er sendt til <span>xxx@eksempel.dk</span>
+            </div>
+            <!-- CTA 1-->
+            <div class="videre-btn">
+                <button id="videre-popup-btn"><a href="forside-tilmeld.html" class="knap">LAD OS KOMME I GANG</a></button>
+            </div>
+        </div>
+        
+        <!-- CTA 2 -->
+        <div class="center">
+            <button id="open-popup-btn">
+                GENNEMFØR BETALING
+            </button>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/reward.js"></script>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</body></html>
